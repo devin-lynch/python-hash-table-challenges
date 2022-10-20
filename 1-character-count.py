@@ -29,4 +29,22 @@ the character d occurs 1 times
 '''
 
 def character_count(string):
-  pass
+  # use a dictionary as a has table to store uniqu values
+  hash_table = {}
+  # loop over the numbers, check if they are in the hash table
+  for char in string:
+      # if a char is in the hash table -- return True
+      if char in hash_table:
+          hash_table[char] += 1
+          print(hash_table)
+      # if a number isn't in the hash table -- add it to the hash table
+      else:
+          hash_table[char] = 1
+          
+  # for char in hash_table: # this way also works
+  #    print(f'the character {char} occurs {hash_table[char]} times')
+
+  for x, y in hash_table.items():
+    print(f'the character {x} occurs {y} times')
+
+character_count('banana')

@@ -24,4 +24,16 @@ Output: 10
 '''    
 
 def find_it(li):
-  pass
+  hash_table = {}
+  for num in li:
+    if num in hash_table:
+      hash_table[num] += 1
+    else:
+      hash_table[num] = 1
+  
+  for num in hash_table:
+    if hash_table[num] % 2:
+      print(num)
+
+find_it([1,1,2,-2,5,2,4,4,-1,-2,5])
+

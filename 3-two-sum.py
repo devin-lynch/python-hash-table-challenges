@@ -26,4 +26,20 @@ Output: [0,1]
 '''    
 
 def two_sum(nums, target):
-  pass
+  hash_table = {}
+  for num in nums:
+    hash_table[num] = num
+  # print(hash_table)
+
+  for i in hash_table:
+    
+    for j in hash_table:
+      if hash_table[i] + hash_table[j] == target and hash_table[i] != hash_table[j]:
+        return print(f'[index: {hash_table[i]}, {hash_table[j]}]')
+      else: 
+        j += 1
+
+        
+
+
+two_sum([3,2,4], 6)
