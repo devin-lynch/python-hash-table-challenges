@@ -35,5 +35,29 @@ def find_it(li):
     if hash_table[num] % 2:
       print(num)
 
-find_it([1,1,2,-2,5,2,4,4,-1,-2,5])
+# find_it([1,1,2,-2,5,2,4,4,-1,-2,5])
+
+
+# ## # ## # ## # ## #
+# CLASS REVIEW EXAMPLE
+
+# def find_it(li):
+#   # table to keep count of each number as we encounter them
+#   table = {}
+#   odd = None
+#   # loop and count each number
+#   for number in li:
+#     if number in table:
+#       table[number] += 1
+#     else:
+#       table[number] = 1
+
+#     if table[number] % 2 != 0:
+#       odd = number
+#   # loop and check to see which number appeared an odd number of times
+#   # for number in table:
+#   #   if table[number] % 2 != 0:
+#       return odd
+
+# print(find_it([20,1,-1,2,-2,3,3,5,5,1,2,4,20,4,-1,-2,5]))
 

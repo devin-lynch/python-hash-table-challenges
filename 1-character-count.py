@@ -47,4 +47,27 @@ def character_count(string):
   for x, y in hash_table.items():
     print(f'the character {x} occurs {y} times')
 
-character_count('banana')
+# character_count('banana')
+
+
+# ## # ## # ## # ## #
+# CLASS REVIEW EXAMPLE
+
+def character_count(string):
+  # hash table to store strings and count their occurances
+  table = {}
+  for letter in string:
+    # if the letter is in our table, we can increment its value
+    if letter in table:
+      table[letter] += 1
+    # if the letter is not in our table, we can add it with a value of 2
+    else:
+      table[letter] = 1
+
+  print(table)
+
+  # loop over our table and print out the count for each letter
+  for letter in table:
+    print(f'the character {letter} occurs {table[letter]}')
+
+# character_count('hello world')

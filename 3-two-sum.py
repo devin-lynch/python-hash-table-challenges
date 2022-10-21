@@ -39,7 +39,28 @@ def two_sum(nums, target):
       else: 
         j += 1
 
-        
+# two_sum([3,2,4], 6)
 
 
-two_sum([3,2,4], 6)
+# ## # ## # ## # ## #
+# CLASS REVIEW EXAMPLE
+
+def two_sums(nums, target):
+  # loop over every  number, and compare it to every other number
+  for i in range(len(nums)):
+    # loop again and add each number combo to see if they add up to the target
+    for j in range(i + 1, len(nums)):
+      if nums[i] + nums[j] == target:
+        return [i, j]
+
+
+def two_sums(nums, target):
+  hash = {}
+  for i in range(len(nums)):
+    diff = target - nums[i]
+    if diff not in hash:
+      hash[nums[i]] = i
+    else:
+      return [hash[diff], i]
+
+print(two_sums([3,2,4], 6))
